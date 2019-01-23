@@ -20,38 +20,27 @@ let artistSearch = "/byartists.json?artists="
 
 function displayError(msg) {
     document.getElementById("formError").style.display = 'block';
-    document.getElementById("formError").innerText = msg
+    document.getElementById("formError").innerText = msg;
 }
 
 function displayResults(json) {
 
-     console.log('Display Results', json);
-     var size = Object.keys(json).length;
-     //let songList =  json['title'];
-     //song = JSON.parse(json[0]);
-     let i=1;
-     for (x of json) {
-        //console.log(json[0].title);
-        //console.log(json[0].artist.name)
-        document.getElementById("cell"+i).innerHTML = '<p>' + x.title +  '<br>by ' x.artist.name + '</p>'
-        console.log(x.title);
-        console.log(x.artist.name)
+    var size = Object.keys(json).length;
+
+    let i = 1;
+    for (x of json) {
+        document.getElementById("p" + i).innerHTML = x.title.substring(0,40) + '<br>by ' + x.artist.name.substring(0,20);
         i++;
-     }
+    }
 
 }
 
 function submitForm(song, artist) {
-    document.getElementById("formButton").style.display = 'none';
-    document.getElementById("formSubmit").style.display = 'block';
 
-    ////////////
-
+    let searchMessage = '';
     let url = '';
-    let formattedSong = '"' + song.replace(' ','%20') + '"';
-    let formattedArtist = '"' + artist.replace(' ','%20') + '"';
-
-    //console.log(formattedSong);
+    let formattedSong = '"' + song.replace(' ', '%20') + '"';
+    let formattedArtist = '"' + artist.replace(' ', '%20') + '"';
 
     // Different url if we specify song
     if (song != '') {
@@ -59,8 +48,20 @@ function submitForm(song, artist) {
     } else {
         url = baseURL + artistSearch + formattedArtist;
     }
-    
-    console.log('URL:', url);
+
+    // Display search nessage
+    if (song != '') {
+        searchMessage = "Song contains " + song;
+    }
+    if (artist != '') {
+        searchMessage += " Artist contains " + artist;
+    }
+    document.getElementById("formError").style.display = 'block';
+    document.getElementById("formError").innerText = searchMessage;
+
+    // clear search
+    document.getElementById("song").value = '';
+    document.getElementById("artist").value = '';
 
     fetch(url)
         .then(function (result) {
@@ -72,9 +73,6 @@ function submitForm(song, artist) {
             displayResults(json);
         })
 
-    /////////
-
-
 }
 document.getElementById("myForm").addEventListener("submit", event => {
     event.preventDefault();
@@ -82,9 +80,6 @@ document.getElementById("myForm").addEventListener("submit", event => {
 
     let song = document.getElementById("song").value.trim();
     let artist = document.getElementById("artist").value.trim();
-
-    //console.log('xxx' + document.getElementById("song").value);
-    //console.log('yyy' + song);
 
     if (song == '' && artist == '') {
         displayError('Song or Artist Required');

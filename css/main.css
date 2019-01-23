@@ -13,29 +13,149 @@ body {
     z-index: 2;
 }
 .formError {
-    position: relative;
-    display: none;
-    background-color: lightpink;
+    position:absolute;
+    top:265px;
+    right:50%; /* Positions 50% from right (right edge will be at center) */
+    margin-right:-165px; /* Positions 200px to the left of center */
+    display: block;
+    font-size: 15px;
     color: red;
+    display: none;
+    background-color: rgb(234, 218, 59);
     border-radius: 3px;
-    width: 20%;
-    margin: auto;
-    z-index: 3;
+    width: 330px;
 }
 
-.formField {
-    padding: 10px;
-    color: blue;
-}
 .artistField {
-    margin-top:65px;
+    position:absolute;
+    top:660px;
+    right:50%; /* Positions 50% from right (right edge will be at center) */
+    margin-right:-70px; /* Positions 200px to the left of center */
+    display: block;
+    font-size: 20px;
+    color: red;
+    background-color: rgb(234, 218, 59)
+
+}
+.songField {
+    position:absolute;
+    top:695px;
+    right:50%; /* Positions 50% from right (right edge will be at center) */
+    margin-right:-70px; /* Positions 200px to the left of center */
+    display: block;
+    font-size: 20px;
+    color: red;
+    background-color: rgb(234, 218, 59)
+
 }
 .formButton {
-    margin-top: -565px;
+    position:absolute;
+    top:175px;
+    right:50%; /* Positions 50% from right (right edge will be at center) */
+    margin-right:-50px; /* Positions 200px to the left of center */
+    display: block;
     font-size: 30px;
-    padding: 10px;
-    margin-left: 50px;
-    
+}
+#item1 {
+    position:absolute;
+    top:331px;
+    right:50%; /* Positions 50% from right (right edge will be at center) */
+    margin-right:15px; /* Positions 200px to the left of center */
+    display: block;
+    font-size: 30px;
+    color: red;
+    height: 46px;
+    width: 120px;
+
+}
+#item2 {
+    position:absolute;
+    top:398px;
+    right:50%; /* Positions 50% from right (right edge will be at center) */
+    margin-right:15px; /* Positions 200px to the left of center */
+    display: block;
+    font-size: 30px;
+    color: red;
+    height: 46px;
+    width: 120px;
+
+}
+#item3 {
+    position:absolute;
+    top:464px;
+    right:50%; /* Positions 50% from right (right edge will be at center) */
+    margin-right:13px; /* Positions 200px to the left of center */
+    display: block;
+    font-size: 30px;
+    color: red;
+    height: 46px;
+    width: 120px;
+
+}
+#item4 {
+    position:absolute;
+    top:526px;
+    right:50%; /* Positions 50% from right (right edge will be at center) */
+    margin-right:12px; /* Positions 200px to the left of center */
+    display: block;
+    font-size: 30px;
+    color: red;
+    height: 46px;
+    width: 120px;
+
+}
+#item5 {
+    position:absolute;
+    top:330px;
+    right:50%; /* Positions 50% from right (right edge will be at center) */
+    margin-right:-142px; /* Positions 200px to the left of center */
+    display: block;
+    font-size: 30px;
+    color: red;
+    height: 46px;
+    width: 120px;
+
+}
+#item6 {
+    position:absolute;
+    top:397px;
+    right:50%; /* Positions 50% from right (right edge will be at center) */
+    margin-right:-141px; /* Positions 200px to the left of center */
+    display: block;
+    font-size: 30px;
+    color: red;
+    height: 46px;
+    width: 120px;
+
+}
+#item7 {
+    position:absolute;
+    top:462px;
+    right:50%; /* Positions 50% from right (right edge will be at center) */
+    margin-right:-141px; /* Positions 200px to the left of center */
+    display: block;
+    font-size: 30px;
+    color: red;
+    height: 46px;
+    width: 120px;
+
+}
+#item8 {
+    position:absolute;
+    top:526px;
+    right:50%; /* Positions 50% from right (right edge will be at center) */
+    margin-right:-140px; /* Positions 200px to the left of center */
+    display: block;
+    font-size: 30px;
+    color: red;
+    height: 46px;
+    width: 120px;
+
+}
+.results {
+    padding: 2px;
+    font-size: xx-small;
+    font-weight: bold;
 }
 #jukebox {
     position:relative;
@@ -56,7 +176,7 @@ body {
 }
 .tablecell {
     text-align: center;
-    height: 50px;
+    height: 51px;
     color: red;
     font-size: xx-small;
     border: black;
@@ -72,7 +192,7 @@ td {
 }
 .resultsTable {
     display: block;
-    border: black;
+    border: red;
     border-spacing: 8px;
     width: 300px;
     border-style: solid;
