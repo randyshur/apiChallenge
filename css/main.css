@@ -1,0 +1,84 @@
+body {
+    background: radial-gradient(ellipse at center, #99b3c9 0%,#99b3c9 0%,#99b3c9 5%,#151e6d 100%,#2989d8 100%,#207cca 100%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.myForm {
+    margin: 10px 20px 10px 20px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    background-color: #dddddd;
+    z-index: 2;
+}
+.formError {
+    position: relative;
+    display: none;
+    background-color: lightpink;
+    color: red;
+    border-radius: 3px;
+    width: 20%;
+    margin: auto;
+    z-index: 3;
+}
+
+.formField {
+    padding: 10px;
+    color: blue;
+}
+.artistField {
+    margin-top:65px;
+}
+.formButton {
+    margin-top: -565px;
+    font-size: 30px;
+    padding: 10px;
+    margin-left: 50px;
+    
+}
+#jukebox {
+    position:relative;
+    z-index: -1;
+}
+.formSubmit {
+    display: block;
+    color: darkgreen;
+    border-radius: 3px;
+    top: 320px;
+    z-index: 1;
+    font-size: xx-small;
+    width:50%;
+    margin: auto;
+    margin-top: -100px;
+    text-align: center;
+    
+}
+.tablecell {
+    text-align: center;
+    height: 50px;
+    color: red;
+    font-size: xx-small;
+    border: black;
+    border-style: solid;
+    z-index: 1;
+
+}
+td {
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
+}
+.resultsTable {
+    display: block;
+    border: black;
+    border-spacing: 8px;
+    width: 300px;
+    border-style: solid;
+    position: relative;
+    margin: auto;
+    margin-top: -490px;
+    z-index: 1;
+    font-size: xx-small;
+}
